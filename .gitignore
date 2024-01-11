@@ -8,3 +8,5 @@ package-lock.json
 prisma/migrations
 prisma/brain.db
 prisma/brain.db-journal
+
+dist
