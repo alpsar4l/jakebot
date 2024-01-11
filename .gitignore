@@ -1,0 +1,10 @@
+node_modules/
+.env
+
+.git
+
+package-lock.json
+
+prisma/migrations
+prisma/brain.db
+prisma/brain.db-journal
