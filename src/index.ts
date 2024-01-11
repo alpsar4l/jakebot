@@ -1,4 +1,4 @@
-import { Client } from "discord.js";
+import { ActivityType, Client } from "discord.js";
 import { config } from "./config";
 import { commands } from "./commands";
 import { deployCommands } from "./deploy-commands";
@@ -13,7 +13,17 @@ const client = new Client({
 
 client.once("ready", () => {
   console.log("Discord bot is ready! 🤖");
+
+  if (client.user) {
+    client.user.setPresence({
+      activities: [{
+        name: "howdy",
+        type: ActivityType.Custom
+      }],
+    });
+  }
 });
+
 
 client.on("guildCreate", async (guild) =>
   await deployCommands({ guildId: guild.id }));

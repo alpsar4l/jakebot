@@ -1,5 +1,3 @@
-const { MessageMentions: { USERS_PATTERN } } = require('discord.js');
-
 export default function getUserFromMention(input: string) {
   const regex = /<@(\d+)>/g;
   const matches = [];
